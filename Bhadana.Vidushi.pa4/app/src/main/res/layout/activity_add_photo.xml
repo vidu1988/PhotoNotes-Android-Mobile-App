@@ -1,0 +1,191 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+
+tools:context="edu.scu.vbhadana.photonotes.AddPhoto" >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:hint="Enter Image Caption" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Image"
+        android:id="@+id/textPreview"
+        android:layout_gravity="center" />
+
+    <edu.scu.vbhadana.photonotes.TouchDrawView
+        android:layout_width="286dp"
+        android:layout_height="169dp"
+        android:id="@+id/myview"
+        android:layout_gravity="center" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/clickPhoto"
+            android:src="@drawable/camera"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            />
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id = "@+id/saveLocation"
+            android:src = "@drawable/location"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@android:color/background_dark"
+            />
+
+        <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnRecord"
+        android:src="@drawable/record"
+        android:scaleType="centerCrop"
+            android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@android:color/background_dark"
+        />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnStop"
+            android:src="@drawable/stop"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            />
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnPlay"
+            android:src="@drawable/play"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            />
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/saveImage"
+            android:src="@drawable/save"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            />
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Recording Progress     "
+            android:layout_row="0"
+            android:layout_column="0"
+            />
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:clickable="true"
+            android:animationResolution="300"
+            android:layout_row="0"
+            android:layout_column="1"> </ProgressBar>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Current Longitude"
+            android:layout_row="1"
+            android:layout_column="0"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLongitude"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_row="1"
+            android:layout_column="1"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Current Latitude"
+            android:layout_row="2"
+            android:layout_column="0"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLatitude"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_row="2"
+            android:layout_column="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Current Address"
+            android:layout_row="3"
+            android:layout_column="0"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAddress"
+            android:lines="2"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_row="3"
+            android:layout_column="1"
+            />
+
+    </GridLayout>
+    
+</LinearLayout>
