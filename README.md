@@ -4,4 +4,4 @@ The list activity displays the list of saved notes. Each row is represented with
 This app includes many modern day features like  voice note, geo-tagging, photo editing and shaking. It uses Google location, Google map, audio recording/playback, sensor and custom view.
 
 Thanks
-Vidushi Bhadana
+
